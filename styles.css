@@ -57,6 +57,7 @@
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
     padding-left: 45px;
     padding-top: 15px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     gap: 35px
@@ -83,7 +84,7 @@
 }
 
 .small-circle{
-    height:45px;
+    height:50px;
     border-radius: 50%;
 }
 
@@ -133,5 +134,160 @@
 .container .body{
     background-color: rgb(233, 233, 233);
     z-index: -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
+.body .projects{
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.body .your-projects{
+    position: absolute;
+    padding: 20px 90px;
+    font-size: 20px;
+    font-weight: 600;
+    top: 5px;
+}
+
+.body .project-container{
+    display: grid;
+    flex: 1;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: transparent;
+    padding: 60px 90px;
+    gap: 30px;
+}
+
+.body .card{
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+    display: flex;
+    overflow: hidden;
+}
+.body .orange{
+    width: 3%;
+    background-color: rgb(255, 175, 27);
+    flex-grow: 0;
+}
+
+.body .main-info{
+    width: 97%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+
+.body .project-header {
+   font-weight: 600;
+}
+
+.body .description{
+   font-size: 14px;
+   color: rgb(89, 89, 89);
+}
+
+.body .project-icons{  
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.body .project-icon{
+    width: 25px;
+}
+.body .announcements{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.body .announcement-heading{
+    font-size: 18px;
+    position: absolute;
+    top: 25px;
+    font-weight: 600px;
+}
+
+.body .announcements-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-self: center;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+    border-radius: 15px;
+    margin-top:60px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    padding:20px 30px;
+}
+
+.body .announcement{
+    flex: 1;
+    padding:20px 0px;
+    line-height: 15px;
+}
+
+.body .announcement:not(:last-child){
+    border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+.body .announcement-title{
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+.body .announce-body{
+    color: rgb(89, 89, 89);
+    font-size: 12px;
+}
+.body .trending{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} 
+
+.body .trending-heading{
+    font-size: 18px;
+    position: absolute;
+    font-weight: 600px;
+    top: 5px;
+}
+
+.body .trending-container{
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+    flex:1;
+    margin-bottom:60px;
+    margin-top: 40px;
+    margin-right: 100px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 35px;
+}
+
+.body .profile{
+    display: flex;
+    gap: 20px;
+}
+
+.body .account-name{
+    font-size: 18px;
+}
+
+.body .account-description{
+    color: rgb(89, 89, 89);
+    font-size: 16px;
+}
